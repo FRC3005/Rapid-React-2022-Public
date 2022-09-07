@@ -1,0 +1,363 @@
+{
+  "HALProvider": {
+    "Other Devices": {
+      "Ball Color Detector[0]": {
+        "header": {
+          "open": true
+        },
+        "name": "First Ball Detector"
+      },
+      "Ball Color Detector[1]": {
+        "header": {
+          "open": true
+        },
+        "name": "Second Ball Detector"
+      },
+      "Limelight": {
+        "header": {
+          "open": true
+        }
+      },
+      "SPARK MAX [12]": {
+        "name": "Flywheel"
+      },
+      "SPARK MAX [13]": {
+        "name": "Accelerator"
+      },
+      "SPARK MAX [14]": {
+        "name": "Feeder"
+      },
+      "SPARK MAX [16]": {
+        "name": "Intake"
+      },
+      "SPARK MAX [1]": {
+        "name": "Rear Right Drive"
+      },
+      "SPARK MAX [21]": {
+        "name": "Indexer"
+      },
+      "SPARK MAX [22]": {
+        "name": "VBelt Left"
+      },
+      "SPARK MAX [23]": {
+        "name": "VBelt Right"
+      },
+      "SPARK MAX [25]": {
+        "name": "Turret"
+      },
+      "SPARK MAX [26]": {
+        "name": "Hood"
+      },
+      "SPARK MAX [2]": {
+        "name": "Rear Right Steer"
+      },
+      "SPARK MAX [3]": {
+        "name": "Front Right Drive"
+      },
+      "SPARK MAX [4]": {
+        "name": "Front Right Steer"
+      },
+      "SPARK MAX [5]": {
+        "name": "Front Left Drive"
+      },
+      "SPARK MAX [6]": {
+        "name": "Front Left Steer"
+      },
+      "SPARK MAX [7]": {
+        "name": "Rear Left Drive"
+      },
+      "SPARK MAX [8]": {
+        "name": "Rear Left Steer"
+      }
+    }
+  },
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Accelerator": "Subsystem",
+      "/LiveWindow/Accelerator/Spark Max Controller": "PIDController",
+      "/LiveWindow/Climber": "Subsystem",
+      "/LiveWindow/DriveSubsystem": "Subsystem",
+      "/LiveWindow/DriveSubsystem/123X Controller": "PIDController",
+      "/LiveWindow/DriveSubsystem/Field 2d": "Field2d",
+      "/LiveWindow/DriveSubsystem/X Controller": "PIDController",
+      "/LiveWindow/DriveSubsystem/Y Controller": "PIDController",
+      "/LiveWindow/DriveSubsystem/frontLeft/DriveMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/frontRight/DriveMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/rearLeft/DriveMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/rearRight/DriveMotor": "PIDController",
+      "/LiveWindow/ExampleSubsystem": "Subsystem",
+      "/LiveWindow/Flywheel": "Subsystem",
+      "/LiveWindow/Flywheel/Spark Max Controller": "PIDController",
+      "/LiveWindow/HealthMonitor": "Subsystem",
+      "/LiveWindow/Hood": "Subsystem",
+      "/LiveWindow/Hood/Controller": "PIDController",
+      "/LiveWindow/Indexer": "Subsystem",
+      "/LiveWindow/Indexer/Indexer Roller/Theta Controller": "PIDController",
+      "/LiveWindow/Intake": "Subsystem",
+      "/LiveWindow/RobotState": "Subsystem",
+      "/LiveWindow/Shooter": "Subsystem",
+      "/LiveWindow/Shooter/Accelerator": "Subsystem",
+      "/LiveWindow/Shooter/Flywheel": "Subsystem",
+      "/LiveWindow/Shooter/Spark Max Controller": "PIDController",
+      "/LiveWindow/SparkMaxMonitor": "Subsystem",
+      "/LiveWindow/Turret": "Subsystem",
+      "/LiveWindow/Turret/Controller/Inner Position Loop": "PIDController",
+      "/LiveWindow/Ungrouped/ADXRS450_Gyro[0]": "Gyro",
+      "/LiveWindow/Ungrouped/DigitalInput[0]": "Digital Input",
+      "/LiveWindow/Ungrouped/DigitalInput[1]": "Digital Input",
+      "/LiveWindow/Ungrouped/DigitalInput[2]": "Digital Input",
+      "/LiveWindow/Ungrouped/DigitalInput[3]": "Digital Input",
+      "/LiveWindow/Ungrouped/DigitalOutput[28]": "Digital Output",
+      "/LiveWindow/Ungrouped/PIDController[10]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[11]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[12]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[1]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[2]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[3]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[4]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[5]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[6]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[7]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[8]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[9]": "PIDController",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/SmartDashboard/Field": "Field2d",
+      "/SmartDashboard/Hood": "Subsystem",
+      "/SmartDashboard/Indexer": "Subsystem",
+      "/SmartDashboard/SendableChooser[0]": "String Chooser",
+      "/SmartDashboard/Shooter": "Subsystem"
+    },
+    "windows": {
+      "/LiveWindow/DriveSubsystem/Field 2d": {
+        "window": {
+          "visible": true
+        }
+      },
+      "/SmartDashboard/Field": {
+        "window": {
+          "visible": true
+        }
+      }
+    }
+  },
+  "NetworkTables": {
+    "LiveWindow": {
+      "Accelerator": {
+        "Spark Max Controller": {
+          "open": true
+        }
+      },
+      "Indexer": {
+        "Indexer Roller": {
+          "open": true
+        }
+      },
+      "Intake": {
+        "Solenoid": {
+          "open": true
+        }
+      },
+      "Shooter": {
+        "Flywheel": {
+          "open": true
+        }
+      },
+      "Ungrouped": {
+        "DoubleSolenoid[1,0]": {
+          "open": true
+        },
+        "Scheduler": {
+          "open": true
+        }
+      },
+      "open": true
+    },
+    "SmartDashboard": {
+      "Hood": {
+        "open": true
+      },
+      "SendableChooser[0]": {
+        "open": true
+      },
+      "open": true
+    },
+    "limelight": {
+      "open": true
+    }
+  },
+  "Plot": {
+    "Plot <0>": {
+      "plots": [
+        {
+          "height": 347,
+          "series": [
+            {
+              "color": [
+                0.2980392277240753,
+                0.44705885648727417,
+                0.6901960968971252,
+                1.0
+              ],
+              "id": "SPARK MAX [13]-Velocity"
+            },
+            {
+              "color": [
+                0.8666667342185974,
+                0.5176470875740051,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "SPARK MAX [12]-Velocity"
+            },
+            {
+              "color": [
+                0.3333333432674408,
+                0.658823549747467,
+                0.4078431725502014,
+                1.0
+              ],
+              "id": "SPARK MAX [22]-Velocity"
+            },
+            {
+              "color": [
+                0.7686275243759155,
+                0.30588236451148987,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "SPARK MAX [23]-Velocity"
+            },
+            {
+              "color": [
+                0.5058823823928833,
+                0.44705885648727417,
+                0.7019608020782471,
+                1.0
+              ],
+              "id": "SPARK MAX [14]-Velocity"
+            }
+          ]
+        }
+      ],
+      "window": {
+        "visible": false
+      }
+    },
+    "Plot <1>": {
+      "plots": [
+        {
+          "height": 346,
+          "series": [
+            {
+              "color": [
+                0.2980392277240753,
+                0.44705885648727417,
+                0.6901960968971252,
+                1.0
+              ],
+              "id": "SPARK MAX [12]-Motor Current"
+            },
+            {
+              "color": [
+                0.8666667342185974,
+                0.5176470875740051,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "SPARK MAX [21]-Applied Output"
+            },
+            {
+              "color": [
+                0.3333333432674408,
+                0.658823549747467,
+                0.4078431725502014,
+                1.0
+              ],
+              "id": "SPARK MAX [21]-Motor Current"
+            },
+            {
+              "color": [
+                0.7686275243759155,
+                0.30588236451148987,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "NT:/LiveWindow/Indexer/Indexer Roller/Filtered Current"
+            },
+            {
+              "color": [
+                0.5058823823928833,
+                0.44705885648727417,
+                0.7019608020782471,
+                1.0
+              ],
+              "id": "NT:/LiveWindow/Indexer/Indexer Roller/Indexer Current"
+            },
+            {
+              "color": [
+                0.5764706134796143,
+                0.4705882668495178,
+                0.3764706254005432,
+                1.0
+              ],
+              "id": "NT:/LiveWindow/Indexer/Indexer Roller/Indexer Stalled"
+            }
+          ],
+          "viewTime": 120.0
+        }
+      ],
+      "window": {
+        "visible": false
+      }
+    },
+    "Plot <2>": {
+      "plots": [
+        {
+          "height": 353,
+          "series": [
+            {
+              "color": [
+                0.2980392277240753,
+                0.44705885648727417,
+                0.6901960968971252,
+                1.0
+              ],
+              "id": "SPARK MAX [9]-Applied Output"
+            },
+            {
+              "color": [
+                0.8666667342185974,
+                0.5176470875740051,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "SPARK MAX [10]-Applied Output"
+            },
+            {
+              "color": [
+                0.3333333432674408,
+                0.658823549747467,
+                0.4078431725502014,
+                1.0
+              ],
+              "id": "SPARK MAX [26]-Position"
+            },
+            {
+              "color": [
+                0.7686275243759155,
+                0.30588236451148987,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "SPARK MAX [6]-Position"
+            }
+          ]
+        }
+      ],
+      "window": {
+        "visible": false
+      }
+    }
+  }
+}

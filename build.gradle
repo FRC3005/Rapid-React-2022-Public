@@ -1,0 +1,211 @@
+import edu.wpi.first.gradlerio.deploy.roborio.RoboRIO
+
+plugins {
+    id "java"
+    id "edu.wpi.first.GradleRIO" version "2022.4.1"
+    id 'com.diffplug.spotless' version '6.1.0'
+    id "de.undercouch.download" version "5.0.1"
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+def ROBOT_MAIN_CLASS = "frc.robot.Main"
+
+// Define my targets (RoboRIO) and artifacts (deployable files)
+// This is added by GradleRIO's backing project DeployUtils.
+deploy {
+    targets {
+        roborio(getTargetTypeClass('RoboRIO')) {
+            // Team number is loaded either from the .wpilib/wpilib_preferences.json
+            // or from command line. If not found an exception will be thrown.
+            // You can use getTeamOrDefault(team) instead of getTeamNumber if you
+            // want to store a team number in this file.
+            team = project.frc.getTeamNumber()
+            debug = project.frc.getDebugOrDefault(false)
+
+            artifacts {
+                // First part is artifact name, 2nd is artifact type
+                // getTargetTypeClass is a shortcut to get the class type using a string
+
+                frcJava(getArtifactTypeClass('FRCJavaArtifact')) {
+                }
+
+                // Static files artifact
+                frcStaticFileDeploy(getArtifactTypeClass('FileTreeArtifact')) {
+                    files = project.fileTree('src/main/deploy')
+                    directory = '/home/lvuser/deploy'
+                }
+            }
+        }
+    }
+}
+
+// Copy spotless config from WPILib
+spotless {
+    // optional: limit format enforcement to just the files changed by this feature branch
+    // ratchetFrom 'origin/main'
+    java {
+        target fileTree('.') {
+            include '**/*.java'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        toggleOffOn()
+        googleJavaFormat()
+        removeUnusedImports()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+    groovyGradle {
+        target fileTree('.') {
+            include '**/*.gradle'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        greclipse()
+        indentWithSpaces(4)
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+    format 'xml', {
+        target fileTree('.') {
+            include '**/*.xml'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        eclipseWtp('xml')
+        trimTrailingWhitespace()
+        indentWithSpaces(2)
+        endWithNewline()
+    }
+    format 'misc', {
+        target fileTree('.') {
+            include '**/*.md', '**/.gitignore'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        trimTrailingWhitespace()
+        indentWithSpaces(2)
+        endWithNewline()
+    }
+}
+
+def deployArtifact = deploy.targets.roborio.artifacts.frcJava
+
+task _downloadPathPlanner(type: Download) {
+    src 'https://github.com/mjansen4857/pathplanner/releases/download/v2022.1.1/PathPlanner-windows.zip'
+    dest new File(buildDir, 'pathplanner-2022.1.1.zip')
+    overwrite false
+}
+
+task downloadPathPlanner(dependsOn: _downloadPathPlanner, type: Copy) {
+    from zipTree(_downloadPathPlanner.dest)
+    into ".tools/PathPlanner"
+}
+
+// Set to true to use debug for JNI.
+wpi.java.debugJni = false
+
+// Set this to true to enable desktop support.
+def includeDesktopSupport = true
+
+// Defining my dependencies. In this case, WPILib (+ friends), and vendor libraries.
+// Also defines JUnit 4.
+dependencies {
+    implementation wpi.java.deps.wpilib()
+    implementation wpi.java.vendor.java()
+    implementation fileTree(dir: 'libs', include: ['**/*.jar'])
+
+    roborioDebug wpi.java.deps.wpilibJniDebug(wpi.platforms.roborio)
+    roborioDebug wpi.java.vendor.jniDebug(wpi.platforms.roborio)
+
+    roborioRelease wpi.java.deps.wpilibJniRelease(wpi.platforms.roborio)
+    roborioRelease wpi.java.vendor.jniRelease(wpi.platforms.roborio)
+
+    nativeDebug wpi.java.deps.wpilibJniDebug(wpi.platforms.desktop)
+    nativeDebug wpi.java.vendor.jniDebug(wpi.platforms.desktop)
+    simulationDebug wpi.sim.enableDebug()
+
+    nativeRelease wpi.java.deps.wpilibJniRelease(wpi.platforms.desktop)
+    nativeRelease wpi.java.vendor.jniRelease(wpi.platforms.desktop)
+    simulationRelease wpi.sim.enableRelease()
+
+    testImplementation 'junit:junit:4.12'
+}
+
+tasks.register("writeVersion") {
+    // Define an output stream to write to instead of terminal
+    def stdout = new ByteArrayOutputStream()
+
+    // Execute the git command
+    try {
+        exec {
+            commandLine "git", "rev-parse", "--abbrev-ref", "HEAD"
+            // Write to the output stream instead of terminal
+            standardOutput = stdout
+        }
+
+        // Parse the output into a string
+        def branch = stdout.toString().trim()
+        stdout.reset()
+
+        exec {
+            commandLine "git", "rev-parse", "--short", "HEAD"
+            standardOutput = stdout
+        }
+
+        def commitHash = stdout.toString().trim() + "-" + branch
+        stdout.reset()
+
+        commitHash += "-" + new Date().format('yyyyMMddHHmmss').toString()
+        exec {
+            commandLine "git", "diff"
+            standardOutput = stdout
+        }
+
+        def git_diff = stdout.toString().trim()
+        stdout.reset()
+
+        exec {
+            commandLine "git", "status", "--short"
+            standardOutput = stdout
+        }
+
+        if (!git_diff.isEmpty()) {
+            git_diff = stdout.toString() + "-----------------\r\n" + git_diff
+            commitHash += "-dirty"
+        }
+        new File(
+                projectDir.toString() + "/src/main/deploy",
+                "commit.txt"
+                ).text = git_diff
+
+        new File(
+                projectDir.toString() + "/src/main/deploy",
+                "version.txt"
+                ).text = commitHash
+    } catch (Exception e) {
+        println("Failed to generate version.txt due to: " + e.toString())
+        new File(
+                projectDir.toString() + "/src/main/deploy",
+                "version.txt"
+                ).text = e.toString()
+    }
+}
+
+deploy.targets.roborio.artifacts.frcStaticFileDeploy.dependsOn(writeVersion)
+
+// Simulation configuration (e.g. environment variables).
+wpi.sim.addGui().defaultEnabled = true
+wpi.sim.addDriverstation()
+
+// Setting up my Jar File. In this case, adding all libraries into the main jar ('fat jar')
+// in order to make them all available at runtime. Also adding the manifest so WPILib
+// knows where to look for our Robot Class.
+jar {
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest edu.wpi.first.gradlerio.GradleRIOPlugin.javaManifest(ROBOT_MAIN_CLASS)
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+// Configure jar and deploy tasks
+deployArtifact.jarTask = jar
+wpi.java.configureExecutableTasks(jar)
+wpi.java.configureTestTasks(test)

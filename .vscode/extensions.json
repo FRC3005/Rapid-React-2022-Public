@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "shengchen.vscode-checkstyle",
+        "redhat.java",
+        "eamodio.gitlens",
+        "vscjava.vscode-java-test",
+        "vscjava.vscode-java-pack"
+    ]
+}

@@ -1,0 +1,1281 @@
+{
+  "tabPane": [
+    {
+      "title": "SmartDashboard",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "SmartDashboard/",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 0,
+        "tiles": {}
+      }
+    },
+    {
+      "title": "LiveWindow",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "LiveWindow/",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 0,
+        "tiles": {
+          "0,0": {
+            "size": [
+              2,
+              4
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_source0": "network_table:///LiveWindow/Turret",
+              "_title": "Turret",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Turret/Controller/Velocity Goal",
+                  "_title": "Controller/Velocity Goal"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/Turret/Controller/Inner Position Loop",
+                  "_title": "Controller/Inner Position Loop"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Turret/Controller/Position Goal",
+                  "_title": "Controller/Position Goal"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Turret/Controller/Velocity State",
+                  "_title": "Controller/Velocity State"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Turret/Position",
+                  "_title": "Position"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Turret/Test Enable",
+                  "_title": "Test Enable",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Turret/Setpoint",
+                  "_title": "Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Turret/Controller/Position State",
+                  "_title": "Controller/Position State"
+                }
+              ]
+            }
+          },
+          "2,0": {
+            "size": [
+              2,
+              4
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_source0": "network_table:///LiveWindow/DriveSubsystem",
+              "_title": "DriveSubsystem",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningAbsolute/Distance",
+                  "_title": "frontLeft/TurningAbsolute/Distance"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningAbsolute/Inverted",
+                  "_title": "frontRight/TurningAbsolute/Inverted",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningEncoder/Position",
+                  "_title": "rearLeft/TurningEncoder/Position"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningAbsolute/Distance",
+                  "_title": "rearLeft/TurningAbsolute/Distance"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningAbsolute/Is Connected",
+                  "_title": "rearRight/TurningAbsolute/Is Connected",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningAbsolute/Inverted",
+                  "_title": "rearRight/TurningAbsolute/Inverted",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/DriveMotor",
+                  "_title": "rearLeft/DriveMotor"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningMotor/i",
+                  "_title": "frontRight/TurningMotor/i"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningMotor/d",
+                  "_title": "frontRight/TurningMotor/d"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningMotor/p",
+                  "_title": "frontRight/TurningMotor/p"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/DriveMotor",
+                  "_title": "rearRight/DriveMotor"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/Gyro/Yaw Degrees",
+                  "_title": "Gyro/Yaw Degrees"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningAbsolute/Is Connected",
+                  "_title": "frontLeft/TurningAbsolute/Is Connected",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningAbsolute/Distance Per Rotation",
+                  "_title": "rearRight/TurningAbsolute/Distance Per Rotation"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningAbsolute/Absolute Position",
+                  "_title": "frontRight/TurningAbsolute/Absolute Position"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningAbsolute/Raw Sensor Output",
+                  "_title": "frontLeft/TurningAbsolute/Raw Sensor Output"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/Turning Setpoint",
+                  "_title": "rearRight/Turning Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningAbsolute/Raw Sensor Output",
+                  "_title": "rearRight/TurningAbsolute/Raw Sensor Output"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningMotor/goal",
+                  "_title": "rearLeft/TurningMotor/goal"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/DriveMotor",
+                  "_title": "frontRight/DriveMotor"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningAbsolute/Distance",
+                  "_title": "frontRight/TurningAbsolute/Distance"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningAbsolute/Offset",
+                  "_title": "frontLeft/TurningAbsolute/Offset"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningAbsolute/Is Connected",
+                  "_title": "rearLeft/TurningAbsolute/Is Connected",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningAbsolute/Offset",
+                  "_title": "rearLeft/TurningAbsolute/Offset"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/Turning Setpoint",
+                  "_title": "frontRight/Turning Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningEncoder/Velocity",
+                  "_title": "frontRight/TurningEncoder/Velocity"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/Velocity Setpoint",
+                  "_title": "rearLeft/Velocity Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/Gyro/Other Errors",
+                  "_title": "Gyro/Other Errors"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningMotor/goal",
+                  "_title": "frontLeft/TurningMotor/goal"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningAbsolute/Distance",
+                  "_title": "rearRight/TurningAbsolute/Distance"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningEncoder/Velocity",
+                  "_title": "rearRight/TurningEncoder/Velocity"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/DriveMotor",
+                  "_title": "frontLeft/DriveMotor"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/Testmode Enable",
+                  "_title": "rearLeft/Testmode Enable",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningMotor/goal",
+                  "_title": "rearRight/TurningMotor/goal"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/Testmode Enable",
+                  "_title": "rearRight/Testmode Enable",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningMotor/d",
+                  "_title": "rearLeft/TurningMotor/d"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningAbsolute/Offset",
+                  "_title": "frontRight/TurningAbsolute/Offset"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningMotor/i",
+                  "_title": "rearLeft/TurningMotor/i"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningMotor/p",
+                  "_title": "rearLeft/TurningMotor/p"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningAbsolute/Absolute Position",
+                  "_title": "frontLeft/TurningAbsolute/Absolute Position"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningAbsolute/Offset",
+                  "_title": "rearRight/TurningAbsolute/Offset"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/Velocity Setpoint",
+                  "_title": "frontLeft/Velocity Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningAbsolute/Scalar",
+                  "_title": "frontLeft/TurningAbsolute/Scalar"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningAbsolute/Raw Sensor Output",
+                  "_title": "rearLeft/TurningAbsolute/Raw Sensor Output"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningAbsolute/Scalar",
+                  "_title": "rearLeft/TurningAbsolute/Scalar"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningAbsolute/Absolute Position",
+                  "_title": "rearRight/TurningAbsolute/Absolute Position"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/Velocity Setpoint",
+                  "_title": "rearRight/Velocity Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/Turning Setpoint",
+                  "_title": "rearLeft/Turning Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningMotor/goal",
+                  "_title": "frontRight/TurningMotor/goal"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningEncoder/Velocity",
+                  "_title": "frontLeft/TurningEncoder/Velocity"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/Testmode Enable",
+                  "_title": "frontRight/Testmode Enable",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningEncoder/Velocity",
+                  "_title": "rearLeft/TurningEncoder/Velocity"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/Testmode Enable",
+                  "_title": "frontLeft/Testmode Enable",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningAbsolute/Inverted",
+                  "_title": "frontLeft/TurningAbsolute/Inverted",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningAbsolute/Scalar",
+                  "_title": "frontRight/TurningAbsolute/Scalar"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/Velocity Setpoint",
+                  "_title": "frontRight/Velocity Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningEncoder/Position",
+                  "_title": "frontRight/TurningEncoder/Position"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/Gyro/Data Errors",
+                  "_title": "Gyro/Data Errors"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningAbsolute/Scalar",
+                  "_title": "rearRight/TurningAbsolute/Scalar"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningMotor/d",
+                  "_title": "frontLeft/TurningMotor/d"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningMotor/i",
+                  "_title": "frontLeft/TurningMotor/i"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningMotor/p",
+                  "_title": "frontLeft/TurningMotor/p"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningAbsolute/Inverted",
+                  "_title": "rearLeft/TurningAbsolute/Inverted",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/Turning Setpoint",
+                  "_title": "frontLeft/Turning Setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningEncoder/Position",
+                  "_title": "rearRight/TurningEncoder/Position"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearLeft/TurningAbsolute/Absolute Position",
+                  "_title": "rearLeft/TurningAbsolute/Absolute Position"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningAbsolute/Is Connected",
+                  "_title": "frontRight/TurningAbsolute/Is Connected",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontRight/TurningAbsolute/Raw Sensor Output",
+                  "_title": "frontRight/TurningAbsolute/Raw Sensor Output"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningMotor/d",
+                  "_title": "rearRight/TurningMotor/d"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningMotor/i",
+                  "_title": "rearRight/TurningMotor/i"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/rearRight/TurningMotor/p",
+                  "_title": "rearRight/TurningMotor/p"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/DriveSubsystem/frontLeft/TurningEncoder/Position",
+                  "_title": "frontLeft/TurningEncoder/Position"
+                }
+              ]
+            }
+          },
+          "4,0": {
+            "size": [
+              2,
+              4
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_source0": "network_table:///LiveWindow/Flywheel",
+              "_title": "Flywheel",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/Flywheel/Spark Max Controller",
+                  "_title": "Spark Max Controller"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Flywheel/enable",
+                  "_title": "enable",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Flywheel/setpoint",
+                  "_title": "setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Flywheel/Velocity",
+                  "_title": "Velocity"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Flywheel/At Speed?",
+                  "_title": "At Speed?",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                }
+              ]
+            }
+          },
+          "6,0": {
+            "size": [
+              2,
+              4
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_source0": "network_table:///LiveWindow/Intake",
+              "_title": "Intake",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Intake/Intake State",
+                  "_title": "Intake State",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Intake/Test Enable",
+                  "_title": "Test Enable",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Intake/Solenoid/Value",
+                  "_title": "Solenoid/Value"
+                }
+              ]
+            }
+          },
+          "8,0": {
+            "size": [
+              2,
+              4
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_source0": "network_table:///LiveWindow/Ungrouped",
+              "_title": "Ungrouped",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DigitalInput[0]/Value",
+                  "_title": "DigitalInput[0]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/PIDController[1]",
+                  "_title": "PIDController[1]"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[2]/Distance Per Rotation",
+                  "_title": "DutyCycle Encoder[2]/Distance Per Rotation"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DigitalOutput[27]/Value",
+                  "_title": "DigitalOutput[27]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[3]/Is Connected",
+                  "_title": "DutyCycle Encoder[3]/Is Connected",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/PIDController[2]",
+                  "_title": "PIDController[2]"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Duty Cycle[0]/Output",
+                  "_title": "Duty Cycle[0]/Output"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Counter[2]/Value",
+                  "_title": "Counter[2]/Value"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[1]/Is Connected",
+                  "_title": "DutyCycle Encoder[1]/Is Connected",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Duty Cycle[2]/Frequency",
+                  "_title": "Duty Cycle[2]/Frequency"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DigitalInput[1]/Value",
+                  "_title": "DigitalInput[1]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[1]/Distance",
+                  "_title": "DutyCycle Encoder[1]/Distance"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DigitalOutput[28]/Value",
+                  "_title": "DigitalOutput[28]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/PIDController[3]",
+                  "_title": "PIDController[3]"
+                },
+                {
+                  "_type": "PID Controller",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/PIDController[4]",
+                  "_title": "PIDController[4]"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Counter[3]/Value",
+                  "_title": "Counter[3]/Value"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Duty Cycle[1]/Output",
+                  "_title": "Duty Cycle[1]/Output"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DigitalInput[2]/Value",
+                  "_title": "DigitalInput[2]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Duty Cycle[0]/Frequency",
+                  "_title": "Duty Cycle[0]/Frequency"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[2]/Distance",
+                  "_title": "DutyCycle Encoder[2]/Distance"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Duty Cycle[3]/Frequency",
+                  "_title": "Duty Cycle[3]/Frequency"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[0]/Distance Per Rotation",
+                  "_title": "DutyCycle Encoder[0]/Distance Per Rotation"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DigitalInput[26]/Value",
+                  "_title": "DigitalInput[26]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[2]/Is Connected",
+                  "_title": "DutyCycle Encoder[2]/Is Connected",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Duty Cycle[2]/Output",
+                  "_title": "Duty Cycle[2]/Output"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DigitalInput[3]/Value",
+                  "_title": "DigitalInput[3]/Value",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Counter[0]/Value",
+                  "_title": "Counter[0]/Value"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[0]/Is Connected",
+                  "_title": "DutyCycle Encoder[0]/Is Connected",
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[3]/Distance Per Rotation",
+                  "_title": "DutyCycle Encoder[3]/Distance Per Rotation"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[3]/Distance",
+                  "_title": "DutyCycle Encoder[3]/Distance"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Duty Cycle[1]/Frequency",
+                  "_title": "Duty Cycle[1]/Frequency"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Duty Cycle[3]/Output",
+                  "_title": "Duty Cycle[3]/Output"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/Counter[1]/Value",
+                  "_title": "Counter[1]/Value"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Ungrouped/DutyCycle Encoder[0]/Distance",
+                  "_title": "DutyCycle Encoder[0]/Distance"
+                }
+              ]
+            }
+          },
+          "10,0": {
+            "size": [
+              2,
+              4
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_source0": "network_table:///LiveWindow/ExampleSubsystem",
+              "_title": "ExampleSubsystem",
+              "Layout/Label position": "BOTTOM",
+              "_children": []
+            }
+          },
+          "0,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Hood/Test Enable",
+              "_title": "Hood/Test Enable",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "1,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/VBelt Right/Run Voltage",
+              "_title": "Indexer/VBelt Right/Run Voltage"
+            }
+          },
+          "2,4": {
+            "size": [
+              1,
+              2
+            ],
+            "content": {
+              "_type": "PID Controller",
+              "_source0": "network_table:///LiveWindow/Hood/Controller",
+              "_title": "Hood/Controller"
+            }
+          },
+          "3,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Indexer/Test Enable",
+              "_title": "Indexer/Test Enable",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "4,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/Indexer Roller/Indexer Current",
+              "_title": "Indexer/Indexer Roller/Indexer Current"
+            }
+          },
+          "5,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Accelerator/setpoint",
+              "_title": "Accelerator/setpoint"
+            }
+          },
+          "6,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Accelerator/Feeder Test Voltage",
+              "_title": "Accelerator/Feeder Test Voltage"
+            }
+          },
+          "7,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/First (Near Shooter) Color Sensor/B",
+              "_title": "Indexer/First (Near Shooter) Color Sensor/B"
+            }
+          },
+          "8,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/First (Near Shooter) Color Sensor/G",
+              "_title": "Indexer/First (Near Shooter) Color Sensor/G"
+            }
+          },
+          "9,4": {
+            "size": [
+              1,
+              2
+            ],
+            "content": {
+              "_type": "PID Controller",
+              "_source0": "network_table:///LiveWindow/Accelerator/Spark Max Controller",
+              "_title": "Accelerator/Spark Max Controller"
+            }
+          },
+          "10,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/First (Near Shooter) Color Sensor/R",
+              "_title": "Indexer/First (Near Shooter) Color Sensor/R"
+            }
+          },
+          "11,4": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Hood/Position",
+              "_title": "Hood/Position"
+            }
+          },
+          "0,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/First (Near Shooter) Color Sensor/Distance mm",
+              "_title": "Indexer/First (Near Shooter) Color Sensor/Distance mm"
+            }
+          },
+          "1,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Indexer/VBelt Left/Running",
+              "_title": "Indexer/VBelt Left/Running",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "3,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/Second (Near Intake) Color Sensor/Distance mm",
+              "_title": "Indexer/Second (Near Intake) Color Sensor/Distance mm"
+            }
+          },
+          "4,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Indexer/VBelt Right/Running",
+              "_title": "Indexer/VBelt Right/Running",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "5,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/Second (Near Intake) Color Sensor/B",
+              "_title": "Indexer/Second (Near Intake) Color Sensor/B"
+            }
+          },
+          "6,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/Second (Near Intake) Color Sensor/G",
+              "_title": "Indexer/Second (Near Intake) Color Sensor/G"
+            }
+          },
+          "7,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/Second (Near Intake) Color Sensor/R",
+              "_title": "Indexer/Second (Near Intake) Color Sensor/R"
+            }
+          },
+          "8,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/Test Roller Voltage",
+              "_title": "Indexer/Test Roller Voltage"
+            }
+          },
+          "10,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Indexer/Test Vbelt Left",
+              "_title": "Indexer/Test Vbelt Left",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "11,5": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/VBelt Left/Run Voltage",
+              "_title": "Indexer/VBelt Left/Run Voltage"
+            }
+          },
+          "0,6": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Hood/Setpoint",
+              "_title": "Hood/Setpoint"
+            }
+          },
+          "1,6": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/Cargo Count",
+              "_title": "Indexer/Cargo Count"
+            }
+          },
+          "2,6": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Indexer/Sensor Override",
+              "_title": "Indexer/Sensor Override",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "3,6": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Accelerator/enable",
+              "_title": "Accelerator/enable",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "4,6": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Indexer/State",
+              "_title": "Indexer/State"
+            }
+          },
+          "5,6": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Indexer/Test Vbelt Right",
+              "_title": "Indexer/Test Vbelt Right",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "6,6": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///LiveWindow/Accelerator/Accelerator Velocity",
+              "_title": "Accelerator/Accelerator Velocity"
+            }
+          },
+          "7,6": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///LiveWindow/Indexer/Indexer Roller/Running",
+              "_title": "Indexer/Indexer Roller/Running",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Test Mode",
+      "autoPopulate": false,
+      "autoPopulatePrefix": "",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 0,
+        "tiles": {
+          "7,0": {
+            "size": [
+              2,
+              3
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_title": "Accelerator",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Toggle Switch",
+                  "_source0": "network_table:///LiveWindow/Accelerator/enable",
+                  "_title": "LiveWindow/Accelerator/enable"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Accelerator/setpoint",
+                  "_title": "/LiveWindow/Accelerator/setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Accelerator/Feeder Test Voltage",
+                  "_title": "/LiveWindow/Accelerator/Feeder Test Voltage"
+                }
+              ]
+            }
+          },
+          "0,0": {
+            "size": [
+              2,
+              4
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_title": "Subsystem Layout",
+              "Layout/Label position": "BOTTOM",
+              "_children": []
+            }
+          },
+          "5,0": {
+            "size": [
+              2,
+              3
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_title": "Flywheel",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Toggle Switch",
+                  "_source0": "network_table:///LiveWindow/Flywheel/enable",
+                  "_title": "LiveWindow/Flywheel/enable"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Flywheel/setpoint",
+                  "_title": "/LiveWindow/Flywheel/setpoint"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Flywheel/Velocity",
+                  "_title": "/LiveWindow/Flywheel/Velocity"
+                }
+              ]
+            }
+          },
+          "3,0": {
+            "size": [
+              2,
+              3
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_title": "Indexer",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Toggle Switch",
+                  "_source0": "network_table:///LiveWindow/Indexer/Test Enable",
+                  "_title": "LiveWindow/Indexer/Test Enable"
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Indexer/Test Roller Voltage",
+                  "_title": "/LiveWindow/Indexer/Test Roller Voltage"
+                },
+                {
+                  "_type": "Toggle Switch",
+                  "_source0": "network_table:///LiveWindow/Indexer/Test Vbelt Left",
+                  "_title": "LiveWindow/Indexer/Test Vbelt Left"
+                },
+                {
+                  "_type": "Toggle Switch",
+                  "_source0": "network_table:///LiveWindow/Indexer/Test Vbelt Right",
+                  "_title": "LiveWindow/Indexer/Test Vbelt Right"
+                }
+              ]
+            }
+          },
+          "9,0": {
+            "size": [
+              2,
+              3
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_title": "Hood",
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Toggle Switch",
+                  "_source0": "network_table:///LiveWindow/Hood/Test Enable",
+                  "_title": "LiveWindow/Hood/Test Enable"
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///LiveWindow/Hood/Setpoint",
+                  "_title": "LiveWindow/Hood/Setpoint",
+                  "Slider Settings/Min": 0.0,
+                  "Slider Settings/Max": 60.0,
+                  "Slider Settings/Block increment": 1.0,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Text View",
+                  "_source0": "network_table:///LiveWindow/Hood/Position",
+                  "_title": "/LiveWindow/Hood/Position"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "windowGeometry": {
+    "x": -2.0,
+    "y": 25.0,
+    "width": 1792.0,
+    "height": 1095.0
+  }
+}

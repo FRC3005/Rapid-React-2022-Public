@@ -1,0 +1,115 @@
+{
+  "NetworkTables": {
+    "LiveWindow": {
+      "DriveSubsystem": {
+        "frontLeft": {
+          "TurningAbsolute": {
+            "open": true
+          }
+        },
+        "rearRight": {
+          "TurningMotor": {
+            "open": true
+          },
+          "open": true
+        }
+      },
+      "Indexer": {
+        "First (Near Shooter) Color Sensor": {
+          "open": true
+        },
+        "Second (Near Intake) Color Sensor": {
+          "open": true
+        },
+        "open": true
+      },
+      "open": true
+    },
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Accelerator/Spark Max Controller": "PIDController",
+      "/LiveWindow/DriveSubsystem/frontLeft/DriveMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/frontLeft/TurningMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/frontLeft/TurningMotor/Inner Position Loop": "PIDController",
+      "/LiveWindow/DriveSubsystem/frontRight/DriveMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/frontRight/TurningMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/frontRight/TurningMotor/Inner Position Loop": "PIDController",
+      "/LiveWindow/DriveSubsystem/rearLeft/DriveMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/rearLeft/TurningMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/rearLeft/TurningMotor/Inner Position Loop": "PIDController",
+      "/LiveWindow/DriveSubsystem/rearRight/DriveMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/rearRight/TurningMotor": "PIDController",
+      "/LiveWindow/DriveSubsystem/rearRight/TurningMotor/Inner Position Loop": "PIDController",
+      "/LiveWindow/Flywheel": "Subsystem",
+      "/LiveWindow/Flywheel/Spark Max Controller": "PIDController",
+      "/LiveWindow/Hood/Controller": "PIDController",
+      "/LiveWindow/Indexer": "Subsystem",
+      "/LiveWindow/Intake": "Subsystem",
+      "/LiveWindow/Turret": "Subsystem",
+      "/LiveWindow/Turret/Controller/Inner Position Loop": "PIDController",
+      "/LiveWindow/Ungrouped/DigitalInput[0]": "Digital Input",
+      "/LiveWindow/Ungrouped/DigitalInput[1]": "Digital Input",
+      "/LiveWindow/Ungrouped/DigitalInput[2]": "Digital Input",
+      "/LiveWindow/Ungrouped/DigitalInput[3]": "Digital Input",
+      "/LiveWindow/Ungrouped/PIDController[1]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[2]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[3]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[4]": "PIDController",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/SmartDashboard/DriveSubsystem": "Subsystem"
+    }
+  },
+  "NetworkTables Settings": {
+    "mode": "Client"
+  },
+  "Plots": {
+    "Plot <0>": {
+      "plots": [
+        {
+          "height": 703,
+          "series": [
+            {
+              "color": [
+                0.2980392277240753,
+                0.44705885648727417,
+                0.6901960968971252,
+                1.0
+              ],
+              "id": "NT:/LiveWindow/DriveSubsystem/rearRight/TurningMotor/Position State"
+            },
+            {
+              "color": [
+                0.8666667342185974,
+                0.5176470875740051,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "NT:/LiveWindow/DriveSubsystem/rearRight/TurningMotor/Position Goal"
+            },
+            {
+              "color": [
+                0.3333333432674408,
+                0.658823549747467,
+                0.4078431725502014,
+                1.0
+              ],
+              "id": "NT:/LiveWindow/DriveSubsystem/rearRight/TurningMotor/Velocity State"
+            },
+            {
+              "color": [
+                0.7686275243759155,
+                0.30588236451148987,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "NT:/LiveWindow/DriveSubsystem/rearRight/TurningMotor/Velocity Goal"
+            }
+          ]
+        }
+      ],
+      "window": {
+        "visible": false
+      }
+    }
+  }
+}
